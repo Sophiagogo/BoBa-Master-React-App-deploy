@@ -10,8 +10,20 @@ import About from './pages/about';
 import SignIn from './pages/signIn/signin';
 import Footer from "./components/Footer/Footer.js";
 import Products from './pages/products';
+import { Component } from 'react';
 
-function App() {
+
+class App extends Component { 
+   constructor(props) {    
+     super(props);    
+     this.state = {}    
+     this.connecToServer = this.connecToServer.bind(this);  }
+
+     connecToServer() {    fetch('/');  }
+     componentDidMount() {    this.connecToServer();  }
+
+
+render() {
   return (
     <Router>
       <Navbar />
@@ -27,6 +39,7 @@ function App() {
       <Footer />
     </Router>
   );
+}
 }
 
 export default App;
