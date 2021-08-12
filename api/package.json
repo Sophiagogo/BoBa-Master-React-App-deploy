@@ -1,0 +1,38 @@
+{
+  "name": "mern-shoppingcart-redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon node server.js",
+    "server": "nodemon server.js",
+    "client": "cd ui && npm run start",
+    "server-install": "npm install",
+    "client-install": "cd ui && npm install",
+    "install-all": "concurrently \"npm run server-install\"  \"npm run client-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd ui && npm install && npm run build",
+    "data:import": "node seederScript"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.26.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "googleapis": "^84.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.12"
+  }
+}
