@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const sendMail = require('./sendMail')
 
 //const client = new OAuth2(process.env.MAILING_SERVICE_CLIENT_ID)
-const  {CLIENT_URL}  = https://boba-master.herokuapp.com;
+const { CLIENT_URL } = process.env;
 
 const { google } = require('googleapis')
 const { OAuth2 } = google.auth
