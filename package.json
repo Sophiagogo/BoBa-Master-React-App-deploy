@@ -12,7 +12,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix ui",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node seederScript"
+    "data:import": "node seederScript",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "keywords": [],
   "author": "",
