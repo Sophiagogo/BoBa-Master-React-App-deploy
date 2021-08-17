@@ -1,12 +1,12 @@
 import React from 'react';
-import '../Navbar/Button.css';
+import './Button.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const OrderNow = ({
+export const UserInfo = ({
   children,
   type,
   onClick,
@@ -20,7 +20,7 @@ export const OrderNow = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/allproducts' className='btn-mobile'>
+    <Link to='/profile' className='btn-mobile'>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}

@@ -78,31 +78,31 @@
 
 /* --------- Dropdown ---------- */
 .drop-nav{
-  position: relative  !important;
-  padding: 10px 0  !important;
+  position: relative;
+  padding: 2px 5;
+  font-size: 1.2rem;
 }
 .drop-nav a{
-  text-transform: capitalize  !important;
-  overflow: hidden  !important;
+  text-transform: capitalize;
+  overflow: hidden;
 }
 .drop-nav .dropdown{
-  position: absolute  !important;
-  background: white  !important;
-  width: 100%  !important;
-  width: calc(100% + 30px)  !important;
-  top: 50px  !important;
-  display: none  !important;
+  position: absolute;
+  background: rgb(20, 19, 19);
+  width: 100%;
+  width: calc(100% + 30px);
+  top: 50px;
+  display: none;
   
 }
 .drop-nav .dropdown li{
-  display: block  !important;
+  display: block;
 }
 .drop-nav:hover .dropdown{
-  display: block  !important;
+  display: block;
 }
+/* ----------------------------- */
 
-
-  
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
@@ -172,7 +172,7 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fff;
+    color: rgb(20, 15, 15);
     padding: 14px 20px;
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
@@ -185,26 +185,30 @@
   }
 
   /* --------- Dropdown ---------- */
-.drop-nav{
-  position: relative  !important;
-  padding: 10px 0  !important;
-}
-.drop-nav a{
-  text-transform: capitalize  !important;
-  overflow: hidden  !important;
-}
-.drop-nav .dropdown{
-  position: absolute  !important;
-  background: #282c34  !important;
-  width: 100%  !important;
-  width: calc(100% + 30px)  !important;
-  top: 50px  !important;
-  display: none  !important;
-}
-.drop-nav .dropdown li{
-  display: block  !important;
-}
-.drop-nav:hover .dropdown{
-  display: block  !important;
-}
+  .drop-nav{
+    position: relative;
+    padding: 10px 0;
+  }
+  .drop-nav a{
+    text-transform: capitalize;
+    overflow: hidden;
+  }
+  .drop-nav .dropdown{
+    position: absolute;
+    background: #282c34;
+    width: 100%;
+    width: calc(100% + 30px);
+    top: 50px;
+    display: none;
+  }
+  .drop-nav .dropdown li{
+    display: block;
+  }
+  .drop-nav:hover .dropdown{
+    display: block;
+  }
+  .drop-nav .nav-links{
+    position: relative;
+    padding: 10px 0;
+  }
 }

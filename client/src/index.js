@@ -4,23 +4,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import SimpleReactLightbox from 'simple-react-lightbox';
-import DataProvider from '../src/pages/signIn/redux/store';
+import DataProvider from './pages/signIn/redux-tobedeleted_combinewithProdectStore/store';
+import thunk from "redux-thunk";
 
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 ReactDOM.render(
-
-  <React.StrictMode>
-    <SimpleReactLightbox>
-      <Provider store={store}>
-        <DataProvider>
+  
+  <Provider store={store}> 
+    <React.StrictMode>
+      <SimpleReactLightbox>
+        
           <App />
-        </DataProvider>
-
-      </Provider >
-    </SimpleReactLightbox>
-  </React.StrictMode>,
+       
+      </SimpleReactLightbox>
+    </React.StrictMode>
+  </Provider >  
+  ,
 
   document.getElementById('root')
 );

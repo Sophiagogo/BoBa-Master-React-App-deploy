@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Body from './components/body/Body';
-import { dispatchLogin, fetchUser, dispatchGetUser } from './redux/actions/authAction';
+import { dispatchLogin, fetchUser, dispatchGetUser } from './redux-tobedeleted_combinewithProdectStore/actions/authAction';
 import axios from 'axios';
 
 

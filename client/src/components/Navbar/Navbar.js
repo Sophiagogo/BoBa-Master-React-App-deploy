@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
+import { UserInfo} from './UserInfo';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux'
-import axios from 'axios'
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 import './Navbar.css';
 
 function Navbar() {
@@ -25,19 +26,18 @@ function Navbar() {
   }
 
   const userLink = () => {
-    return <li className="drop-nav">
-      <Link to="#">
-        {user.name} <i class="fa-solid fa-circle-chevron-down"></i>
+    return <div className="drop-nav" >
+      <Link to="#" className='nav-links'>
+        {user.name} <i className="fa-solid fa-circle-chevron-down"></i>
       </Link>
 
       <ul className="dropdown">
-        <li><Link to="/profile">Profile</Link></li>
-        <li><Link to="/my-order">My order</Link></li>
-        <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
+        <li><Link to="/profile" className='nav-links'>Profile</Link></li>
+        <li><Link to="/cart" className='nav-links'>My Cart</Link></li>
+        <li><Link to="/" className='nav-links' onClick={handleLogout}>Logout</Link></li>
       </ul>
-    </li>
+    </div>
   }
-
 
   // end of updating
 
@@ -81,7 +81,7 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link
-                to='/products'
+                to='/allproducts'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -108,25 +108,23 @@ function Navbar() {
                 About
               </Link>
             </li>
-            {
-              isLogged
-                ? userLink()
-                : <li>
-                  <Link
-                    to='/sign-in'
-                    className='nav-links-mobile'
-                    onClick={closeMobileMenu}
-                  >
-                    Sign In
-                    
-                  </Link>
-                  
-                </li>
-            }
+            
+            <div className='nav-links-mobile' onClick={closeMobileMenu}>
+              {
+                isLogged
+                  ? userLink()
+                  : <li>
+                    <Link to='/sign-in' className='nav-links'>Sign In</Link>
+                  </li>
+              }
+            </div>
 
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
-
+          {
+            isLogged
+              ? button && <UserInfo buttonStyle='btn--outline'> { userLink() }</UserInfo>
+              : button && <Button buttonStyle='btn--outline'>SIGN IN</Button>
+          }
         </div>
       </nav>
     </>

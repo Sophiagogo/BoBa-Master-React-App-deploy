@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "10.x",
-    "npm": "6.x"
-  },
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix ui",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -21,6 +17,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.26.3",
+    "cookie-parse": "^0.4.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",
