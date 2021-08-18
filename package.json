@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix ui",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node seederScript",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],
   "author": "",
