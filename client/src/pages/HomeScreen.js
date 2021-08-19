@@ -21,7 +21,7 @@ const HomeScreen = () => {
   }, [dispatch]);
 
 
-  if (this.props.products || products === undefined) { return <div>Loading....</div>; } else {
+  if (products === undefined) { return <div>Loading....</div>; } else {
 
   return (
     <div className="page-container">
