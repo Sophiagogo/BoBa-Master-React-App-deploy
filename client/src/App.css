@@ -45,7 +45,7 @@
 	border-bottom: 1px solid #eee;
 }
 
-.container {
+.photo_container {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
@@ -66,16 +66,16 @@
   filter: opacity(.8)
 }
 
-@media (max-width: 991px) {
-  .container {
+@media (max-width: 1000px) {
+  .photo_container {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
 }
 
-@media (max-width: 991px) {
-  .container {
+@media (max-width: 500px) {
+  .photo_container {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { isLength, isMatch } from './components/body/utils/Validation'
 import { showSuccessMsg, showErrMsg } from './components/body/utils/Notification'
 import { fetchAllUsers, dispatchGetAllUsers } from './redux-tobedeleted_combinewithProdectStore/actions/usersAction'
@@ -20,15 +19,15 @@ const Profile = () => {
   const auth = useSelector(state => state.auth)
   const token = useSelector(state => state.token)
 
-  const users = useSelector(state => state.users)
+  //const users = useSelector(state => state.users)
 
   const { user, isAdmin } = auth
   const [data, setData] = useState(initialState)
   const { name, password, cf_password, err, success } = data
 
 
-  const [loading, setLoading] = useState(false)
-  const [callback, setCallback] = useState(false)
+  const [loading] = useState(false)
+  const [callback] = useState(false)
 
   const dispatch = useDispatch()
 

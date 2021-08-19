@@ -12,7 +12,7 @@ const ProductScreen = ({ match, history }) => {
 
   // add default value
   const INITIAL_VALUE = {
-    name: "",
+  name: "",
   description: "",
   price:0,
   countInStock: 0,

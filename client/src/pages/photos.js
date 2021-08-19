@@ -24,7 +24,7 @@ function Photos() {
             <TagButton name="foods" tagActive={tag === 'foods' ? true : false} handleSetTag={setTag} /> /
           </div>
           <SRLWrapper>
-            <div className="container">
+            <div className="photo_container">
               {filteredImages.map(image => (
                 <div key={image.id} className="image-card">
                   <a href={`/images/${image.imageName}`}>

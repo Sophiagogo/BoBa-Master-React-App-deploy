@@ -6,6 +6,7 @@ import Home from './pages';
 import ProductScreen from './pages/ProductScreen';
 import CartScreen from "./pages/CartScreen";
 import HomeScreen from "./pages/HomeScreen";
+import CreditCardForm from './pages/CreditCardForm';
 import Photos from './pages/photos';
 import About from './pages/about';
 import SignIn from './pages/signIn/signin';
@@ -23,7 +24,7 @@ function App() {
           <Route exact path="/allproducts" component={HomeScreen} />
           <Route exact path="/product/:id" component={ProductScreen} />
           <Route exact path="/allproducts/cart" component={CartScreen} />
-          
+          <Route path="/checkout" component={CreditCardForm} />
           <Route path='/photos' component={Photos} />
           <Route path='/about' component={About} />
           <Route path='/sign-in' component={SignIn} />

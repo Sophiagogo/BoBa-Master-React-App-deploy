@@ -4,8 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import SimpleReactLightbox from 'simple-react-lightbox';
-import DataProvider from './pages/signIn/redux-tobedeleted_combinewithProdectStore/store';
-import thunk from "redux-thunk";
+
 
 import { Provider } from "react-redux";
 import store from "./redux/store";

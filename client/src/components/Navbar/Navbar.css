@@ -15,18 +15,22 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  max-width: 1500px;
+  max-width: 2500px;
 }
   
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 100px;
+  margin-bottom: 15px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
+}
+.navbar-logo:hover {
+  color:rgb(246, 243, 243)
 }
   
 .fa-typo3 {
@@ -61,6 +65,7 @@
 .nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
+  color:rgb(245, 243, 246)
 }
   
 .fa-bars {
@@ -79,8 +84,10 @@
 /* --------- Dropdown ---------- */
 .drop-nav{
   position: relative;
-  padding: 2px 5;
+  /* padding: 2px 5; */
   font-size: 1.2rem;
+  height: 30px;
+  margin-bottom: 16px;
 }
 .drop-nav a{
   text-transform: capitalize;
@@ -91,8 +98,8 @@
   background: rgb(20, 19, 19);
   width: 100%;
   width: calc(100% + 30px);
-  top: 50px;
-  display: none;
+  top: 30px;
+  display:none;
   
 }
 .drop-nav .dropdown li{
@@ -106,6 +113,18 @@
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
+  }
+
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
   }
 
   .nav-menu {
@@ -168,7 +187,7 @@
     text-align: center;
     margin: 2rem auto;
     border-radius: 4px;
-    width: 80%;
+    width: 50%;
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;

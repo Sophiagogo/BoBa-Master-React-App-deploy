@@ -6,12 +6,11 @@ import {useSelector} from 'react-redux';
 import NotFound from './utils/NotFound';
 import ForgotPassword from './auth/ForgotPassword';
 import ResetPassword from './auth/ResetPassword';
-import Profile from '../../profile';
 import HomeScreen from "../../../HomeScreen";
 
 function Body() {
     const auth = useSelector(state => state.auth)
-    const {isLogged, isAdmin} = auth
+    const {isLogged} = auth
 
     return (
         <div className="page-container">

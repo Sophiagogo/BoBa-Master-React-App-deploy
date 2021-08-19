@@ -27,16 +27,17 @@ function Navbar() {
 
   const userLink = () => {
     return <div className="drop-nav" >
-      <Link to="#" className='nav-links'>
-        {user.name} <i className="fa-solid fa-circle-chevron-down"></i>
-      </Link>
+        <Link to="#" className='nav-links'>
+          {user.name} <i className="fa-solid fa-circle-chevron-down"></i>
+        </Link>
 
-      <ul className="dropdown">
-        <li><Link to="/profile" className='nav-links'>Profile</Link></li>
-        <li><Link to="/cart" className='nav-links'>My Cart</Link></li>
-        <li><Link to="/" className='nav-links' onClick={handleLogout}>Logout</Link></li>
-      </ul>
-    </div>
+        <ul className="dropdown">
+          <li><Link to="/profile" className='nav-links'>Profile</Link></li>
+          <li><Link to="/cart" className='nav-links'>My Cart</Link></li>
+          <li><Link to="/" className='nav-links' onClick={handleLogout}>Logout</Link></li>
+        </ul>
+      </div>
+    
   }
 
   // end of updating
