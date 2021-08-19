@@ -39,13 +39,12 @@ app.use(cors(corsOptions))
 
 
 
-app.get("/", (req, res) => {
-  res.json({ message: "API running..." });
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "API running..." });
+// });
 
 // Routes
 app.use('/user', require('./routes/userRouter'));
-// app.use('/api', require('./routes/upload'))
 
 app.use("/api/products", productRoutes);
 
