@@ -20,6 +20,9 @@ const HomeScreen = () => {
     dispatch(listProducts());
   }, [dispatch]);
 
+
+  if (this.props.products || products === undefined) { return <div>Loading....</div>; } else {
+
   return (
     <div className="page-container">
       <div className="content-wrap">
@@ -49,6 +52,7 @@ const HomeScreen = () => {
       </div>
     </div>
   );
+              }
 };
 
 export default HomeScreen;
